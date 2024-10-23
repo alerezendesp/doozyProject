@@ -36,7 +36,7 @@ const user = JSON.parse(localStorage.getItem('currentUser')) || {
     if (confirmDelete) {
       localStorage.removeItem('currentUser'); // Apagar a conta
       alert('Conta apagada com sucesso!');
-      window.location.href = '/login/index.html'; // Redirecionar para a página de login
+      window.location.href = '/login/login.html'; // Redirecionar para a página de login
     }
   });
   
