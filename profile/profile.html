@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil - Doozy</title>
+  <link rel="stylesheet" href="/profile/profile.css">
+</head>
+<body>
+  <div class="profile-container">
+    <div class="sidebar">
+      <h2>Doozy</h2>
+      <ul>
+        <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
+        <!-- <li><a href="" class="active">Perfil</a></li> -->
+        <li><a href="/login/index.html" id="logout-btn">Logout</a></li>
+      </ul>
+    </div>
+    
+    <div class="profile-content">
+      <h1>Perfil</h1>
+      <form id="profile-form">
+        <div class="input-group">
+          <label for="username">Nome de Usuário</label>
+          <input type="text" id="username" placeholder="Seu nome de usuário" required>
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Seu email" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Nova Senha</label>
+          <input type="password" id="password" placeholder="Nova senha (opcional)">
+        </div>
+        <button type="submit" class="save-btn">Salvar Alterações</button>
+        <button type="button" class="delete-btn" id="delete-account-btn">Apagar Conta</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/profile/profile.js"></script>
+</body>
+</html>
