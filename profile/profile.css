@@ -169,6 +169,7 @@
   }
   
   .delete-btn:hover {
+    color: #fff;
     background-color: #FF3333;
     box-shadow: 0 5px 10px rgba(255, 76, 76, 0.3);
   }
