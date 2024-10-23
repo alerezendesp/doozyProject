@@ -16,7 +16,7 @@ body {
 
 /* Sidebar */
 .sidebar {
-  z-index: 1000; /* Garantindo que o sidebar fique acima do dashboard */
+  z-index: 1000; 
   width: 250px;
   background-color: #3c1c72;
   color: white;
@@ -75,14 +75,14 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 9999; /* O header ainda ficará no topo, mas abaixo do sidebar quando ele abrir */
+  z-index: 9999; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header .menu-toggle {
   font-size: 24px;
   cursor: pointer;
-  z-index: 10000; /* Garantindo que o botão de menu fique sempre acima de tudo */
+  z-index: 10000; 
 }
 
 header .logo {
@@ -110,30 +110,41 @@ header .logo {
 
 .mosaic-box {
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
   flex: 1 1 300px;
   max-width: 300px;
   text-align: center;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .mosaic-box:hover {
-  transform: scale(1.05);
+  transform: scale(1.07);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .mosaic-box h2 {
   color: #4c0080;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.mosaic-box p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 .mosaic-box button {
-  padding: 10px 20px;
+  padding: 12px 25px;
   background-color: #4c0080;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
 .mosaic-box button:hover {
