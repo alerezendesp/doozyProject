@@ -1,258 +1,273 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  background-color: #6c5ce7;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+#logoutButton,
+#darkModeToggle {
+  padding: 0.5rem 1rem;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #6c5ce7;
+  cursor: pointer;
+}
+
+#logoutButton:hover,
+#darkModeToggle:hover {
+  background-color: #e0e0e0;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+
+.calendar,
+.tasks {
+  background-color: #e8e8e8; /* Cor de fundo cinza claro */
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2 {
+  margin-bottom: 1rem;
+}
+
+#taskForm {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+#taskInput {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#priorityInput,
+button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #6c5ce7;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4c4db3;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e0e0e0;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+}
+
+li.alta {
+  border-left: 5px solid red;
+}
+
+li.media {
+  border-left: 5px solid orange;
+}
+
+li.baixa {
+  border-left: 5px solid green;
+}
+
+li.checked {
+  text-decoration: line-through;
+  color: #888;
+  background-color: #d0f0c0;
+}
+
+.selected-day {
+  background-color: #6c5ce7;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #6c5ce7;
+  color: white;
+  margin-top: auto;
+}
+
+/* Estilos para ícones */
+.check-btn,
+.remove-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.check-btn i {
+  color: green;
+}
+
+.remove-btn i {
+  color: red;
+}
+
+.check-btn:hover i,
+.remove-btn:hover i {
+  opacity: 0.7;
+}
+
+/* Estilo para lista de prioridades */
+#priorityInput {
+  text-align: center;
+}
+
+/* Responsividade para telas de tablet e dispositivos menores */
+@media (max-width: 1024px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .calendar,
+  .tasks {
+    width: 90%;
+  }
+
+  #taskForm {
+    flex-direction: column;
+  }
+
+  #taskInput,
+  #priorityInput,
+  button {
+    width: 100%;
     box-sizing: border-box;
   }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  header {
-    background-color: #6c5ce7;
-    color: white;
-    padding: 1.5rem;
-    text-align: center;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-  
-  #logoutButton, #darkModeToggle {
-    padding: 0.5rem 1rem;
-    margin: 0 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ffffff;
-    color: #6c5ce7;
-    cursor: pointer;
-  }
-  
-  #logoutButton:hover, #darkModeToggle:hover {
-    background-color: #e0e0e0;
-  }
-  
-  main {
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem;
-    flex-grow: 1;
-    flex-wrap: wrap;
-  }
-  
-  .calendar, .tasks {
-    background-color: #e8e8e8; /* Cor de fundo cinza claro */
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 45%;
-    margin-bottom: 1rem;
-  }
-  
-  h1, h2 {
-    margin-bottom: 1rem;
-  }
-  
+}
+
+/* Responsividade para telas de dispositivos móveis */
+@media (max-width: 768px) {
   #taskForm {
-    display: flex;
-    flex-direction: row; 
-    gap: 10px;
-    margin-bottom: 1rem;
+    flex-direction: column;
   }
-  
-  #taskInput {
-    flex-grow: 1;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+
+  #taskInput,
+  #priorityInput,
+  button {
+    width: 100%;
+    box-sizing: border-box;
   }
-  
-  #priorityInput, button {
-    padding: 0.5rem;
-    border: none;
-    border-radius: 5px;
-    background-color: #6c5ce7;
-    color: white;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #4c4db3;
-  }
-  
-  ul {
-    list-style: none;
-    padding-left: 0; 
-  }
-  
-  li {
-    display: flex;
-    justify-content: space-between;
-    background-color: #e0e0e0;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    position: relative;
-    text-align: center; 
-  }
-  
-  li.alta {
-    border-left: 5px solid red;
-  }
-  
-  li.media {
-    border-left: 5px solid orange;
-  }
-  
-  li.baixa {
-    border-left: 5px solid green;
-  }
-  
-  li.checked {
-    text-decoration: line-through;
-    color: #888;
-    background-color: #d0f0c0;
-  }
-  
-  .selected-day {
-    background-color: #6c5ce7;
-    color: white;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #6c5ce7;
-    color: white;
-    margin-top: auto;
-  }
-  
-  /* Estilos para ícones */
-  .check-btn, .remove-btn {
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    padding: 0;
-  }
-  
-  .check-btn i {
-    color: green;
-  }
-  
-  .remove-btn i {
-    color: red;
-  }
-  
-  .check-btn:hover i, .remove-btn:hover i {
-    opacity: 0.7;
-  }
-  
-  /* Estilo para lista de prioridades */
-  #priorityInput {
-    text-align: center;
-  }
-  
-  /* Responsividade para telas de tablet e dispositivos menores */
-  @media (max-width: 1024px) {
-    main {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .calendar, .tasks {
-      width: 90%; 
-    }
-  
-    #taskForm {
-      flex-direction: column;
-    }
-  
-    #taskInput, #priorityInput, button {
-      width: 100%;
-      box-sizing: border-box; 
-    }
-  }
-  
-  /* Responsividade para telas de dispositivos móveis */
-  @media (max-width: 768px) {
-    #taskForm {
-      flex-direction: column; 
-    }
-  
-    #taskInput, #priorityInput, button {
-      width: 100%; 
-      box-sizing: border-box;
-    }
-  }
-  
-  /* Estilos para modo escuro */
-  .dark-mode {
-    background-color: #333;
-    color: #f4f4f9;
-  }
-  
-  .dark-mode header {
-    background-color: #444;
-  }
-  
-  .dark-mode .calendar, .dark-mode .tasks {
-    background: #555; /* Fundo escuro no modo escuro */
-  }
-  
-  .dark-mode footer {
-    background-color: #444; /* Cor de fundo do footer no modo escuro */
-  }
-  
-  .dark-mode #logoutButton, .dark-mode #darkModeToggle {
-    background-color: #222;
-    color: #ffffff;
-  }
-  
-  .dark-mode #logoutButton:hover, .dark-mode #darkModeToggle:hover {
-    background-color: #333;
-  }
-  
-  .tasks ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .tasks li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .tasks li.checked {
-    text-decoration: line-through;
-    color: #aaa;
-  }
-  
-  .tasks .check-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #6c5ce7;
-  }
-  
-  .tasks .remove-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #e74c3c;
-  }
-  
-  .fc-day.selected-day {
-    background-color: #f4f4f9;
-  }
+}
+
+/* Estilos para modo escuro */
+.dark-mode {
+  background-color: #333;
+  color: #f4f4f9;
+}
+
+.dark-mode header {
+  background-color: #444;
+}
+
+.dark-mode .calendar,
+.dark-mode .tasks {
+  background: #555; /* Fundo escuro no modo escuro */
+}
+
+.dark-mode footer {
+  background-color: #444; /* Cor de fundo do footer no modo escuro */
+}
+
+.dark-mode #logoutButton,
+.dark-mode #darkModeToggle {
+  background-color: #222;
+  color: #ffffff;
+}
+
+.dark-mode #logoutButton:hover,
+.dark-mode #darkModeToggle:hover {
+  background-color: #333;
+}
+
+.tasks ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.tasks li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.tasks li.checked {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.tasks .check-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6c5ce7;
+}
+
+.tasks .remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+.fc-day.selected-day {
+  background-color: #f4f4f9;
+}

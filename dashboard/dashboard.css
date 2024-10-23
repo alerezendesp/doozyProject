@@ -4,10 +4,9 @@
     /*? = English
     /**  = Português  */
 
-
 /* Estilos Gerais */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #f0f4f8;
   margin: 0;
   padding: 0;
@@ -19,7 +18,7 @@ body {
 .sidebar {
   z-index: 1000; /* Garantindo que o sidebar fique acima do dashboard */
   width: 250px;
-  background-color: #3C1C72;
+  background-color: #3c1c72;
   color: white;
   height: 100vh;
   padding-top: 20px;
@@ -62,12 +61,12 @@ body {
 }
 
 .sidebar ul li:hover {
-  background-color: #6633FF;
+  background-color: #6633ff;
 }
 
 /* Header */
 header {
-  background-color: #3C1C72;
+  background-color: #3c1c72;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -99,7 +98,7 @@ header .logo {
   padding: 20px;
   gap: 20px;
   justify-content: center;
-  background-color: #EAEAFF;
+  background-color: #eaeaff;
   min-height: 100vh;
   transition: margin-left 0.3s ease;
   margin-left: 0;
@@ -125,12 +124,12 @@ header .logo {
 }
 
 .mosaic-box h2 {
-  color: #4C0080;
+  color: #4c0080;
 }
 
 .mosaic-box button {
   padding: 10px 20px;
-  background-color: #4C0080;
+  background-color: #4c0080;
   color: white;
   border: none;
   border-radius: 5px;
@@ -138,7 +137,7 @@ header .logo {
 }
 
 .mosaic-box button:hover {
-  background-color: #6633FF;
+  background-color: #6633ff;
 }
 
 /* Responsividade */
