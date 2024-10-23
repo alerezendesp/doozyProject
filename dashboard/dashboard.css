@@ -1,0 +1,164 @@
+/*! dashboard stylesheet */
+
+/* legend languages:=
+    /*? = English
+    /**  = Português  */
+
+
+/* Estilos Gerais */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: relative;
+}
+
+/* Sidebar */
+.sidebar {
+  z-index: 1000; /* Garantindo que o sidebar fique acima do dashboard */
+  width: 250px;
+  background-color: #3C1C72;
+  color: white;
+  height: 100vh;
+  padding-top: 20px;
+  position: fixed;
+  left: -250px;
+  transition: left 0.3s ease;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul:first-child {
+  margin-top: 50px;
+}
+
+.sidebar ul li i {
+  margin-right: 10px;
+}
+
+.sidebar ul li:hover {
+  background-color: #6633FF;
+}
+
+/* Header */
+header {
+  background-color: #3C1C72;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999; /* O header ainda ficará no topo, mas abaixo do sidebar quando ele abrir */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10000; /* Garantindo que o botão de menu fique sempre acima de tudo */
+}
+
+header .logo {
+  margin-right: 20px;
+  font-size: 24px;
+}
+
+/* Containers de Mosaico */
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  padding: 20px;
+  gap: 20px;
+  justify-content: center;
+  background-color: #EAEAFF;
+  min-height: 100vh;
+  transition: margin-left 0.3s ease;
+  margin-left: 0;
+}
+
+.sidebar.active ~ .dashboard-container {
+  margin-left: 250px;
+}
+
+.mosaic-box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  flex: 1 1 300px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.mosaic-box:hover {
+  transform: scale(1.05);
+}
+
+.mosaic-box h2 {
+  color: #4C0080;
+}
+
+.mosaic-box button {
+  padding: 10px 20px;
+  background-color: #4C0080;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mosaic-box button:hover {
+  background-color: #6633FF;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .dashboard-container {
+    margin-left: 0;
+  }
+  header {
+    padding: 15px;
+  }
+  header .menu-toggle {
+    font-size: 20px;
+  }
+  .sidebar {
+    width: 200px;
+    left: -200px;
+  }
+  .sidebar.active {
+    left: 0;
+  }
+}
+
+/*! endOfStyling ----------------------------------------------------------------------*/

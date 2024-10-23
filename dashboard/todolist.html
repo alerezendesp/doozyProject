@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doozy - Dashboard</title>
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <link rel="stylesheet" href="/dashboard/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="#"><i class="fas fa-user"></i> Perfil</a></li>
+      <li><a href="/calendário/calendar.html"><i class="fas fa-calendar-alt"></i> Calendário</a></li>
+      <li><a href="/login/index.html"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+    </ul>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <i class="fas fa-bars menu-toggle" id="menu-toggle"></i>
+    <div class="logo">Doozy</div>
+  </header>
+
+  <!-- Dashboard -->
+  <div class="dashboard-container">
+    <div class="mosaic-box">
+      <h2>Organização por Áreas</h2>
+      <p>Crie diferentes áreas (workspaces) para agrupar suas tarefas em projetos específicos.</p>
+      <button id="add-area-btn">Adicionar Nova Área</button>
+    </div>
+
+    <div class="mosaic-box">
+      <h2>Tarefas Recorrentes</h2>
+      <p>Configure tarefas que se repetem automaticamente com intervalos regulares.</p>
+      <button id="recurring-task-btn">Definir Tarefa Recorrente</button>
+    </div>
+
+    <div class="mosaic-box">
+      <h2>Lista Rápida</h2>
+      <p>Adicione tarefas rapidamente sem navegação complexa.</p>
+      <input type="text" id="quick-task" placeholder="Nova tarefa rápida...">
+      <button id="quick-task-btn">Adicionar Tarefa</button>
+    </div>
+
+    <div class="mosaic-box">
+      <h2>Histórico de Tarefas Concluídas</h2>
+      <p>Visualize todas as tarefas que já foram concluídas.</p>
+      <button id="view-history-btn">Ver Histórico</button>
+      <div id="history-list"></div>
+    </div>
+  </div>
+
+  <script src="/dashboard/dashboard.js"></script>
+
+</body>
+</html>

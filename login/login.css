@@ -1,0 +1,222 @@
+/*! Login styles */
+
+/* legend languages:=
+    /*? = English
+    /**  = Português  */
+
+    :root {
+      --gradient-pallete: linear-gradient(135deg,#ff0000, #5390d9, #5e60ce, #6930c3, #7400b8, #ff0000);
+      --gradient-animation: gradientAnimation 6s infinite;
+      --gradient-animation-btn: gradientAnimationBtn 0.5s ease infinite;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: var(--gradient-pallete);
+      background-size: 200% 200%;
+      animation: var(--gradient-animation);
+    }
+    
+    .login-card {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+      width: 350px;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .login-card h1 {
+      color: #4C0080;
+      margin-bottom: 10px;
+      font-size: 26px;
+    }
+    
+    .login-card p {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    .input-group {
+      margin-bottom: 20px;
+      position: relative;
+    }
+    
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #4C0080;
+    }
+    
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid hsl(0, 0%, 80%);
+      border-radius: 5px;
+      font-size: 16px;
+      background-color: #f9f9f9;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .input-group input:focus {
+      border-color: #6633FF;
+      outline: none;
+      box-shadow: 0px 0px 8px rgba(102, 51, 255, 0.5);
+    }
+    
+    /* Estilo dos botões */
+    .login-btn, .reg-btn, .social-btn {
+      background-color: #4C0080;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    
+    .login-btn:hover {
+      background-color: #6633FF;
+      transform: scale(1.05);
+    }
+
+    .reg-btn:hover {
+      background: var(--gradient-pallete);
+      animation: var(--gradient-animation-btn);
+      color: #ffffff;
+      transform: scale(1.05);
+    }
+
+    .reg-btn, .login-btn {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 600;
+    }
+    
+    /* Estilo dos botões sociais */
+    .microsoft-btn, .google-btn {
+      background-color: #f9f9f9;
+      border: 1px solid #000000;
+    }
+    
+    .microsoft-btn img {
+      margin-right: 3px;
+      margin-top: 3pxsssssssssssssssssssssssssssss;
+    }
+
+    .microsoft-btn span {
+      margin-left: 24px;
+      color: #000000;
+    }
+
+    .google-btn {
+      padding: 14px;
+    }
+
+    .google-btn img {
+      margin-right: 16px;
+      margin-top: 3px;
+    }
+
+    .google-btn span {
+      margin-left: 24px;
+      color: #000000;
+    }
+
+    .google-btn:hover, .microsoft-btn:hover {
+      background-color: #dbdbdb;
+    }
+
+    .fa-google {
+      background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Feedback de erro */
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    
+    .input-group .input-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .input-group.error input {
+      border-color: red;
+    }
+    
+    .input-group.error .input-icon {
+      content: '❌';
+      color: red;
+    }
+    
+    .input-group.success input {
+      border-color: green;
+    }
+    
+    .input-group.success .input-icon {
+      content: '✔️';
+      color: green;
+    }
+  
+/* Animação de gradiente em movimento */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradientAnimationBtn {
+  0% {
+    background: #ff0000;
+  }
+  20% {
+    background: #5390d9;
+  }
+  40% {
+    background: #5e60ce;
+  }
+  60% {
+    background: #6930c3;
+  }
+  80% {
+    background: #7400b8;
+  }
+  100% {
+    background: #ff0000;
+  }
+}
+
+/* Modo responsivo */
+@media (max-width: 768px) {
+  .login-card {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/*! endOfStyling ----------------------------------------------------------------------*/

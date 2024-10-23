@@ -1,0 +1,54 @@
+/*! CSS RESET */
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*? principal palette/login */
+  /*TODO/* CSS HEX */
+  --thistle: #e2cfeaff;
+  --amethyst: #a06cd5ff;
+  --royal-purple: #6247aaff;
+  --prussian-blue: #102b3fff;
+  --dark-green: #062726ff;
+
+  /*? secondary palette */
+  /*TODO/* CSS HSL */
+  --rich-black: hsla(197, 100%, 5%, 1);
+  --midnight-green: hsla(190, 100%, 23%, 1);
+  --dark-cyan: hsla(181, 88%, 31%, 1);
+  --tiffany-blue: hsla(160, 41%, 70%, 1);
+  --vanilla: hsla(45, 60%, 78%, 1);
+  --gamboge: hsla(39, 100%, 47%, 1);
+  --alloy-orange: hsla(30, 98%, 40%, 1);
+  --rust: hsla(19, 97%, 37%, 1);
+  --rufous: hsla(5, 81%, 38%, 1);
+  --auburn: hsla(358, 64%, 37%, 1);
+}
+
+::-webkit-search-results-decoration {
+  -webkit-box-shadow: none;
+}
+
+/*! - */
+/*TODO/ legend languages:=
+    /*? blu.e line comments = English
+    /** comentários de linha verde = Português  */
+/* -------------------------------------------- */
+
+/*? en-us: remove the underlines in the links*/
+/** pt-br: remove as linhas de baixo nos links */
+a {
+  text-decoration: none;
+}
+
+/*? en-us: hide the screen anchors */
+/** pt-br: ocultar as âncoras do ecrã */
+a.links {
+  display: none;
+}
